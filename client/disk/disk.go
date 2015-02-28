@@ -89,10 +89,12 @@ func (sf *StateFile) Lock(create bool) (*Lock, error) {
 	defer file.Close()
 
 	fd := int(file.Fd())
+	// syscall.Dup(fd) is giving errors in Windows - undefined: syscall.Dup
 	newFd, err := syscall.Dup(fd)
 	if err != nil {
 		return nil, err
 	}
+	// syscall.Flock, syscall.LOCK_NB and syscall.LOCK_EX undefined in windows
 	if syscall.Flock(newFd, syscall.LOCK_EX|syscall.LOCK_NB) != nil {
 		syscall.Close(newFd)
 		return nil, nil
