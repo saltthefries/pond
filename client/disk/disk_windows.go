@@ -93,7 +93,9 @@ func (sf *StateFile) Lock(create bool) (*Lock, error) {
 	fd := int(file.Fd())
 	// syscall.Dup(fd) is giving errors in Windows - undefined: syscall.Dup
   // It looks like the code is making a new file by copying fd and handling errors
-	newFd, err := syscall.Dup(fd)
+//	newFd, err := syscall.Dup(fd)
+	err := os.Link(fd,newFd)
+
 	if err != nil {
 		return nil, err
 	}
