@@ -70,6 +70,8 @@ func NewStateFile(rand io.Reader, path string) *StateFile {
 	}
 }
 
+// method receiver takes in pointer *StateFile
+// this is a function for managing file locks on StateFiles
 func (sf *StateFile) Lock(create bool) (*Lock, error) {
 	sf.lockFdMutex.Lock()
 	defer sf.lockFdMutex.Unlock()
@@ -90,11 +92,13 @@ func (sf *StateFile) Lock(create bool) (*Lock, error) {
 
 	fd := int(file.Fd())
 	// syscall.Dup(fd) is giving errors in Windows - undefined: syscall.Dup
+  // It looks like the code is making a new file by copying fd and handling errors
 	newFd, err := syscall.Dup(fd)
 	if err != nil {
 		return nil, err
 	}
 	// syscall.Flock, syscall.LOCK_NB and syscall.LOCK_EX undefined in windows
+	// checking if the file is locked and closing it if so
 	if syscall.Flock(newFd, syscall.LOCK_EX|syscall.LOCK_NB) != nil {
 		syscall.Close(newFd)
 		return nil, nil
