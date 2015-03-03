@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 	"os"
 	"sync"
-	"syscall"
+//	"syscall"
 
 	"github.com/golang/protobuf/proto"
 	"golang.org/x/crypto/nacl/secretbox"
@@ -90,11 +90,12 @@ func (sf *StateFile) Lock(create bool) (*Lock, error) {
 	}
 	defer file.Close()
 
-	fd := int(file.Fd())
+/*	fd := int(file.Fd())
+
 	// syscall.Dup(fd) is giving errors in Windows - undefined: syscall.Dup
   // It looks like the code is making a new file by copying fd and handling errors
 //	newFd, err := syscall.Dup(fd)
-	err := os.Link(fd,newFd)
+	err = os.Link(fd,newFd)
 
 	if err != nil {
 		return nil, err
@@ -106,7 +107,7 @@ func (sf *StateFile) Lock(create bool) (*Lock, error) {
 		return nil, nil
 	}
 	sf.lockFd = &newFd
-	return &Lock{sf.lockFd}, nil
+*/	return nil, nil
 }
 
 func (sf *StateFile) deriveKey(pw string) error {
@@ -390,12 +391,12 @@ func (sf *StateFile) StartWriter(states chan NewState, done chan struct{}) {
 		}
 		out.Sync()
 
-		var newFd int
+//		var newFd int
 
 		// If we had a lock on the old state file then we need to also
 		// lock the new file. First we lock the temp file.
 		sf.lockFdMutex.Lock()
-		if sf.lockFd != nil {
+/*		if sf.lockFd != nil {
 			newFd, err = syscall.Dup(int(out.Fd()))
 			if err != nil {
 				panic(err)
@@ -405,7 +406,7 @@ func (sf *StateFile) StartWriter(states chan NewState, done chan struct{}) {
 			}
 		}
 		sf.lockFdMutex.Unlock()
-		out.Close()
+*/		out.Close()
 
 		// Remove any previous temporary statefile
 		// (But this shouldn't ever happen?)
@@ -424,7 +425,7 @@ func (sf *StateFile) StartWriter(states chan NewState, done chan struct{}) {
 		os.Remove(sf.Path + "~")
 
 		sf.lockFdMutex.Lock()
-		if sf.lockFd != nil {
+/*		if sf.lockFd != nil {
 			// Duplicate the new file descriptor over the old one.
 			// This will unlock the old inode.
 			if err := syscall.Dup2(newFd, *sf.lockFd); err != nil {
@@ -433,6 +434,7 @@ func (sf *StateFile) StartWriter(states chan NewState, done chan struct{}) {
 			syscall.Close(newFd)
 		}
 		sf.lockFdMutex.Unlock()
+*/
 	}
 }
 
@@ -444,8 +446,8 @@ func (l *Lock) Close() {
 	if *l.fd < 0 {
 		return
 	}
-	syscall.Flock(*l.fd, syscall.LOCK_UN)
-	syscall.Close(*l.fd)
+//	syscall.Flock(*l.fd, syscall.LOCK_UN)
+//	syscall.Close(*l.fd)
 	*l.fd = -1
 }
 
