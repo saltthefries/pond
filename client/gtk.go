@@ -11,7 +11,7 @@ import (
 	"github.com/agl/go-gtk/gdkpixbuf"
 	"github.com/agl/go-gtk/glib"
 	"github.com/agl/go-gtk/gtk"
-	"github.com/agl/go-gtk/gtkspell"
+//	"github.com/agl/go-gtk/gtkspell"
 )
 
 type GTKUI struct {
@@ -381,8 +381,8 @@ func (ui *GTKUI) createWidget(v interface{}) gtk.WidgetLike {
 			})
 		}
 		if v.spellCheck {
-			if _, err := gtkspell.New(view, ""); err != nil {
-				fmt.Fprintf(os.Stderr, "Failed to setup spellchecker: %s\n", err)
+			//if _, err := gtkspell.New(view, ""); err != nil {
+				//fmt.Fprintf(os.Stderr, "Failed to setup spellchecker: %s\n", err)
 			}
 		}
 		if name := v.name; len(name) > 0 {
