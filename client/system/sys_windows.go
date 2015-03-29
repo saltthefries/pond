@@ -6,10 +6,8 @@ import (
 	"errors"
 	"io"
 	"io/ioutil"
-	"os"
 	"strings"
 	"sync"
-	"syscall"
 )
 
 func processLines(filename string, f func(line string) error) error {
@@ -74,20 +72,20 @@ var (
 	safeTempDirOnce sync.Once
 )
 
-func findSafeTempDir() {
-	var candidates []string
+/*func findSafeTempDir() {
+var candidates []string
 
-	err := processLines("/proc/mounts", func(line string) error {
-		fields := strings.Fields(line)
-		if len(fields) < 1 {
-			return nil
-		}
-		path := fields[1]
-		filesystem := fields[2]
-		if filesystem == "tmpfs" &&
-			syscall.Access(path, 7 /* rwx ok */) == nil {
-			candidates = append(candidates, path)
-		}
+err := processLines("/proc/mounts", func(line string) error {
+	fields := strings.Fields(line)
+	if len(fields) < 1 {
+		return nil
+	}
+	path := fields[1]
+	filesystem := fields[2]
+	//		if filesystem == "tmpfs" &&
+*/ //			syscall.Access(path, 7 /* rwx ok */) == nil {
+/*		//			candidates = append(candidates, path)
+		//		}
 
 		return nil
 	})
@@ -125,14 +123,16 @@ func findSafeTempDir() {
 
 	safeTempDir = candidates[0]
 }
-
+*/
 // SafeTempDir returns the path of a writable directory which is mounted with
 // tmpfs. As long as the swap is encrypted, then it should be safe to write
 // there.
 func SafeTempDir() (string, error) {
-	safeTempDirOnce.Do(findSafeTempDir)
-	if safeTempDirErr != nil {
-		return "", safeTempDirErr
-	}
+	/*	safeTempDirOnce.Do(findSafeTempDir)
+		if safeTempDirErr != nil {
+			return "", safeTempDirErr
+		} */
+	// Adding a dummy safeTempDir for now. Secure storage on Windows is TBD
+	safeTempDir = "C:\\pond"
 	return safeTempDir, nil
 }

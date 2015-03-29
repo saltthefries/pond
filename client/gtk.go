@@ -4,14 +4,14 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"syscall"
 
 	"github.com/agl/go-gtk/gdk"
 	"github.com/agl/go-gtk/gdkpixbuf"
 	"github.com/agl/go-gtk/glib"
 	"github.com/agl/go-gtk/gtk"
-//	"github.com/agl/go-gtk/gtkspell"
+	//  GTK spell currently not set up in Windows
+	//	"github.com/agl/go-gtk/gtkspell"
 )
 
 type GTKUI struct {
@@ -51,6 +51,7 @@ func NewGTKUI() *GTKUI {
 		}
 		gtk.MainQuit()
 	})
+	// this doesn't work in Windows - need a replacement error function
 	if err := syscall.Pipe(ui.pipe[:]); err != nil {
 		panic(err)
 	}
@@ -382,8 +383,8 @@ func (ui *GTKUI) createWidget(v interface{}) gtk.WidgetLike {
 		}
 		if v.spellCheck {
 			//if _, err := gtkspell.New(view, ""); err != nil {
-				//fmt.Fprintf(os.Stderr, "Failed to setup spellchecker: %s\n", err)
-			}
+			//fmt.Fprintf(os.Stderr, "Failed to setup spellchecker: %s\n", err)
+			//	}
 		}
 		if name := v.name; len(name) > 0 {
 			ui.textViews[name] = view
