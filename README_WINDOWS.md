@@ -8,9 +8,9 @@ I'm focused on getting a minimal GUI version working such that messages are sent
 I hope this work will form a starting point for other developers, as I'm not that familiar with Windows, GTK, Go, or even Git.
 
 #### Features currently not compatible with Windows
-Spell checking
-TPM
-Checks for encrypted storage
++ Spell checking
++ TPM
++ Checks for encrypted storage
 
 #### Current development environment
 I have made some progress in Windows 7 with the GTK+ bundle 3.6.4 for Win32 with MinGW (also Win32). I'm using Go 1.3rc2 for Win32. I would recommend sticking to 32 bit packages at present as GTK support for Win64 is experimental (according to http://www.gtk.org/download/win64.php).  
