@@ -17,27 +17,27 @@ I have made some progress in Windows 7 with the GTK+ bundle 3.6.4 for Win32 with
 
 
 #### Steps I took to set up a build environment
-I did the following in Windows 7 within a VirtualBox
-Here's what I did to get going--some of this may be redundant / unnecessary.
-Install the following:
-GTK bundle 3.6.4, Win32 - http://www.gtk.org/download/win32.php
-Go 1.3rc2, Win32 - https://storage.googleapis.com/golang/go1.3rc2.windows-386.msi
-MinGW, Win32 - http://www.mingw.org/
-Git
+I did the following in Windows 7 within a VirtualBox  
+Here's what I did to get going--some of this may be redundant / unnecessary.  
+Install the following:  
+GTK bundle 3.6.4, Win32 - http://www.gtk.org/download/win32.php  
+Go 1.3rc2, Win32 - https://storage.googleapis.com/golang/go1.3rc2.windows-386.msi  
+MinGW, Win32 - http://www.mingw.org/  
+Git  
 Pkg-config 0.26-1: http://pkgconfig.freedesktop.org/releases/ (installed to C:\MinGW\bin  
 glib 2.28 - http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.28/glib_2.28.8-1_win32.zip  
 
 I also installed /set up pkg-config:  
-go to http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/  
-download the file pkg-config_0.26-1_win32.zip  
-extract the file bin/pkg-config.exe to C:\MinGW\bin  
+>  go to http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/  
+>  download the file pkg-config_0.26-1_win32.zip  
+>  extract the file bin/pkg-config.exe to C:\MinGW\bin  
 
-download the file gettext-runtime_0.18.1.1-2_win32.zip  
-extract the file bin/intl.dll to C:\MinGW\bin  
+>  download the file gettext-runtime_0.18.1.1-2_win32.zip  
+>  extract the file bin/intl.dll to C:\MinGW\bin  
 
-go to http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.28  
-download the file glib_2.28.8-1_win32.zip  
-extract the file bin/libglib-2.0-0.dll to C:\MinGW\bin  
+>  go to http://ftp.gnome.org/pub/gnome/binaries/win32/glib/2.28  
+>  download the file glib_2.28.8-1_win32.zip  
+>  extract the file bin/libglib-2.0-0.dll to C:\MinGW\bin  
 
 Set the following environment variables:  
 PKG_CONFIG_PATH=C:\GTK\lib\pkgconfig  
