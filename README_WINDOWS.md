@@ -1,4 +1,4 @@
-Windows compatability
+Windows compatibility
 ---------------------
 
 #### Summary / Goals
