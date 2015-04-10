@@ -12,7 +12,6 @@ import (
 	"path/filepath"
 	"strconv"
 	"sync"
-	"syscall"
 	"time"
 
 	"github.com/agl/pond/client/disk"
@@ -134,7 +133,7 @@ func (c *cliClient) Start() {
 			updateTerminalSize(c.term)
 		}
 	}()
-	signal.Notify(resizeChan, syscall.SIGWINCH)
+	//	signal.Notify(resizeChan, syscall.SIGWINCH)
 
 	c.loadUI()
 
