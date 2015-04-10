@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;pond&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../go-gtk" />
+      <root url="file://$PROJECT_DIR$/../ed25519" />
+      <root url="file://$PROJECT_DIR$/../../golang" />
+      <root url="file://$PROJECT_DIR$/../../../golang.org" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

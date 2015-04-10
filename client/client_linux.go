@@ -239,8 +239,7 @@ type UI interface {
 	// read first.
 	ShutdownAndSuspend() error
 	createPassphraseUI() (string, error)
-	// createErasureStorage not currently supported in Windows
-	// createErasureStorage(pw string, stateFile *disk.StateFile) error
+	createErasureStorage(pw string, stateFile *disk.StateFile) error
 	// createAccountUI allows the user to either create a new account or to
 	// import from a entombed statefile. It returns whether an import
 	// occured and an error.
@@ -818,8 +817,7 @@ func (c *client) loadUI() error {
 		if err != nil {
 			return err
 		}
-		// createErasureStorage is not supported in Windows at this time
-		// c.ui.createErasureStorage(pw, stateFile)
+		c.ui.createErasureStorage(pw, stateFile)
 		imported, err = c.ui.createAccountUI(stateFile, pw)
 		if err != nil {
 			return err
