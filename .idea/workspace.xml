@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87ac8cf1-9110-4845-9722-f73b7e733985" name="Default" comment="Eliminated all compile errors in Windows, but not working yet">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/GOPATH__pond_.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/client_linux.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/goLibraries.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/gui_windows.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/main_windows.go" />
-      <change type="DELETED" beforePath="E:\gopath\src\github.com\agl\pond\client\tpm\tpm.go" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/cli.go" afterPath="$PROJECT_DIR$/client/cli.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/client.go" afterPath="$PROJECT_DIR$/client/client.go" />
+    <list default="true" id="87ac8cf1-9110-4845-9722-f73b7e733985" name="Default" comment="Now compiling in Windows">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <list id="2e73ec59-f5ef-457b-a9cb-d58c315dcbdb" name="Rejected commit: Default" comment="Now compiling in Windows">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README_WINDOWS.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/erasure_cli_windows.go" afterPath="$PROJECT_DIR$/client/erasure_cli_windows.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/gtk.go" afterPath="$PROJECT_DIR$/client/gtk.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/system/sys_windows.go" afterPath="$PROJECT_DIR$/client/system/sys_windows.go" />
-      <change type="MOVED" beforePath="E:\gopath\src\github.com\agl\pond\client\gui.go" afterPath="$PROJECT_DIR$/client/gui_linux.go" />
     </list>
     <ignored path="pond.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,40 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="erasure_cli_windows.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/erasure_cli_windows.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gtk.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/gtk.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gui_windows.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/gui_windows.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.77066666">
-              <caret line="61" column="17" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="client.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/client.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="6.0090632">
               <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
               <folding />
             </state>
@@ -77,7 +42,7 @@
       <file leaf-file-name="main_darwin.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main_darwin.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
@@ -128,10 +93,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/client/client_windows.go" />
-        <option value="$PROJECT_DIR$/client/erasure_cli_windows.go" />
-        <option value="$PROJECT_DIR$/client/gtk.go" />
         <option value="$PROJECT_DIR$/client/client.go" />
         <option value="$PROJECT_DIR$/client/gui-nogui.go" />
+        <option value="$PROJECT_DIR$/client/erasure_cli_windows.go" />
+        <option value="$PROJECT_DIR$/client/gtk.go" />
       </list>
     </option>
   </component>
@@ -146,10 +111,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-28" />
-    <option name="y" value="19" />
-    <option name="width" value="1326" />
-    <option name="height" value="725" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1342" />
+    <option name="height" value="681" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -178,8 +143,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -214,6 +177,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,25 +378,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-28" y="19" width="1326" height="725" extended-state="0" />
+    <frame x="-8" y="-8" width="1342" height="681" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32984293" sideWeight="0.49095023" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3063209" sideWeight="0.5030166" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32984293" sideWeight="0.5090498" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25267175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25263953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32984293" sideWeight="0.4969834" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -454,7 +419,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Eliminated all compile errors in Windows, but not working yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eliminated all compile errors in Windows, but not working yet" />
+    <MESSAGE value="Now compiling in Windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now compiling in Windows" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -471,7 +437,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -479,7 +447,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1428636184089" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -535,7 +505,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -543,7 +515,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <marker date="1428636184089" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/gui_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main_darwin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main_freebsd.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main_linux.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/erasure_cli_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/gtk.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <marker date="1428636184089" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -599,7 +641,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,7 +651,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1428636184089" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -663,7 +709,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -671,7 +719,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1428636184089" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,7 +745,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -703,23 +755,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/erasure_cli_windows.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/gtk.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -734,14 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/main_darwin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -767,23 +797,51 @@
         <state vertical-scroll-proportion="0.30722892">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
-            <element signature="e#31#42#0" expanded="true" />
+            <element signature="e#31#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/client.go">
+    <entry file="file://$PROJECT_DIR$/client/erasure_cli_windows.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
-          <folding />
+        <state vertical-scroll-proportion="0.40869564">
+          <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+          <folding>
+            <element signature="e#32#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/gtk.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70434785">
+          <caret line="705" column="0" selection-start-line="705" selection-start-column="0" selection-end-line="705" selection-end-column="0" />
+          <folding>
+            <marker date="1428636184089" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/gui_windows.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.77066666">
+        <state vertical-scroll-proportion="0.0">
           <caret line="61" column="17" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main_darwin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.0090632">
+          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
           <folding />
         </state>
       </provider>
