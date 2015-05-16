@@ -51,10 +51,10 @@ func NewGTKUI() *GTKUI {
 		}
 		gtk.MainQuit()
 	})
-	if err := syscall.Pipe(ui.pipe[:]); err != nil {
-		panic(err)
-	}
-	syscall.SetNonblock(ui.pipe[0], true)
+	//	if err := syscall.Pipe(ui.pipe[:]); err != nil {
+	//		panic(err)
+	//	}
+	// syscall.SetNonblock(ui.pipe[0], true)
 
 	glib.FdWatchAdd(ui.pipe[0], glib.IOIn, func(conditions int) bool {
 		ui.onAction()
@@ -72,8 +72,9 @@ func (ui *GTKUI) Events() <-chan interface{} {
 	return ui.events
 }
 
+// syscall.Write not supported in Windows
 func (ui *GTKUI) Signal() {
-	syscall.Write(ui.pipe[1], []byte{0})
+	//syscall.Write(ui.pipe[1], []byte{0})
 }
 
 func (ui *GTKUI) Run() {
@@ -81,14 +82,14 @@ func (ui *GTKUI) Run() {
 }
 
 func (ui *GTKUI) onAction() {
-	buf := make([]byte, 8)
+	/*buf := make([]byte, 8)
 	for {
-		n, _ := syscall.Read(ui.pipe[0], buf)
+			n, _ := syscall.Read(ui.pipe[0], buf)
 		if n < 1 {
 			break
 		}
 	}
-
+	*/
 	for {
 		select {
 		case v, ok := <-ui.actions:
@@ -380,12 +381,12 @@ func (ui *GTKUI) createWidget(v interface{}) gtk.WidgetLike {
 				ui.updated(v.name)
 			})
 		}
-		if v.spellCheck {
-			if _, err := gtkspell.New(view, ""); err != nil {
-				fmt.Fprintf(os.Stderr, "Failed to setup spellchecker: %s\n", err)
-			}
-		}
-		if name := v.name; len(name) > 0 {
+		/*		if v.spellCheck {
+					if _, err := gtkspell.New(view, ""); err != nil {
+						fmt.Fprintf(os.Stderr, "Failed to setup spellchecker: %s\n", err)
+					}
+				}
+		*/if name := v.name; len(name) > 0 {
 			ui.textViews[name] = view
 			view.Connect("destroy", func() {
 				delete(ui.textViews, name)
