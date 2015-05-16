@@ -7,21 +7,24 @@ My current focus is on identifying compatability problems and making easy fixes.
 I'm focused on getting a minimal GUI version working such that messages are sent securely. Features like secure storage, TPM, and spell check are lower priority.  
 I hope this work will form a starting point for other developers, as I'm not that familiar with Windows, GTK, Go, or even Git.
 
+Please also refer to https://github.com/agl/pond/issues/108 on progress
+
 #### Features currently not compatible with Windows
 + Spell checking
 + TPM
 + Checks for encrypted storage
 
 #### Current development environment
-I have made some progress in Windows 7 with the GTK+ bundle 3.6.4 for Win32 with MinGW (also Win32). I'm using Go 1.3rc2 for Win32. I would recommend sticking to 32 bit packages at present as GTK support for Win64 is experimental (according to http://www.gtk.org/download/win64.php).  
+I have made some progress in Windows 7 with the GTK+3 bundle 3.6.4 for Win32 and the GTK+2 bundle 2.24.10 with MinGW (also Win32). I'm using Go 1.4.2 for Win32. I would recommend sticking to 32 bit packages at present as GTK support for Win64 is experimental (according to http://www.gtk.org/download/win64.php).  
 
 
 #### Steps I took to set up a build environment
 I did the following in Windows 7 within a VirtualBox  
 Here's what I did to get going--some of this may be redundant / unnecessary.  
 Install the following:  
-GTK bundle 3.6.4, Win32 - http://www.gtk.org/download/win32.php  
-Go 1.3rc2, Win32 - https://storage.googleapis.com/golang/go1.3rc2.windows-386.msi  
+GTK+3 bundle 3.6.4, Win32 - http://www.gtk.org/download/win32.php  
+GTK+2 bundle 2.24.10, Win32 - link same as above
+Go 1.4.2, Win32 - https://storage.googleapis.com/golang/go1.4.2.windows-386.msi
 MinGW, Win32 - http://www.mingw.org/  
 Git  
 Pkg-config 0.26-1: http://pkgconfig.freedesktop.org/releases/ (installed to C:\MinGW\bin  
